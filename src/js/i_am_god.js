@@ -11,7 +11,7 @@ let local_counter = 0;
 
 function preload() {
   font = loadFont("https://files.catbox.moe/wep8hv.ttf");
-  backImg = loadImage("https://files..moe/e2a56a.jpg");
+  backImg = loadImage("https://files.catbox.moe/e2a56a.jpg");
   mother_and_child = loadImage("https://files.catbox.moe/5dzkr8.png");
   bush = loadImage("https://files.catbox.moe/zvv66v.png");
   tree = loadImage("https://files.catbox.moe/zypf4p.png");
