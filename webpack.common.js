@@ -8,7 +8,9 @@ const path = require('path')
 
 module.exports = {
   entry: {
-    index: './src/js/index.js'
+    index: './src/index.js',
+    // i_am_a_human: './src/js/i_am_a_human.js',
+    // i_am_god: './src/js/i_am_god.js'
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -108,23 +110,55 @@ module.exports = {
       chunks: ['index']
     }),
 
+    //new HtmlWebpackPlugin({
+    //  template: './src/i_am_a_human.html',
+    //  filename: './i_am_a_human.html',
+    //  chunks: ['index, i_am_a_human']
+    //}),
+//
+    //new HtmlWebpackPlugin({
+    //  template: './src/i_am_god.html',
+    //  filename: './i_am_god.html',
+    //  chunks: ['index, i_am_god']
+    //}),
+
     //404
 
     new HtmlWebpackPlugin({
       template: './src/404.html',
       filename: './404.html',
       chunks: ['index']
-    })
+    }),
+
+   new HtmlWebpackPlugin({
+     template: './src/i_am_god2.html',
+     filename: './i_am_god2.html',
+     chunks: ['index']
+   }),
+
+   new HtmlWebpackPlugin({
+     template: './src/i_am_a_human2.html',
+     filename: './i_am_a_human2.html',
+     chunks: ['index']
+   }),
 
     // Partials example
-    // new HtmlWebpackPartialsPlugin([
-    //   {
-    //     path: path.join(__dirname, './src/partials/sidebar-white.html'),
-    //     location: 'sidebar-white',
-    //     template_filename: '*',
-    //     priority: 'replace'
-    //   }
-    // ]),
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/menubar.html'),
+        location: 'menubar',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ]),
+  new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/footer.html'),
+        location: 'footer',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ]),
   ],
   optimization: {
     minimizer: [new CssMinimizerPlugin()]

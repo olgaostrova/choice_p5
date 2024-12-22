@@ -1,5 +1,5 @@
 // //импорт стилей
-// import '../index.css'
+ import './index.css'
 
 // //подключение реакта
 // import React from 'react'
