@@ -25,12 +25,14 @@ body {
 
     #canvasGod {
         width: 100%;
-        overflow-x: hidden;
+        overflow: hidden;
+        height: 710px;
     }
 
     #canvasHuman {
         width: 100%;
-        overflow-x: hidden;
+        overflow: hidden;
+        height: 710px;
     }
 
     .footer {
