@@ -1,3 +1,23 @@
+
+body::-webkit-scrollbar {
+    width: 12px;
+    /* ширина scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: #FEFEFE;
+    /* цвет дорожки */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: lightgray;
+    /* цвет плашки */
+    border-radius: 20px;
+    /* закругления плашки */
+    border: 3px solid #FEFEFE;
+    /* padding вокруг плашки */
+}
+
 body {
     background-color: #FEFEFE;
     display: flex;
